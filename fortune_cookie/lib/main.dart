@@ -15,21 +15,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -56,7 +41,9 @@ class _MyHomePageState extends State<MyHomePage> {
     "You will find a new friend tomorrow.",
     "A truly rich life contains love and art in abundance.",
     "Accept something that you cannot change, and you will feel better.",
-    "Adventure can be real happiness."
+    "Adventure can be real happiness.",
+    "Advice is like kissing. It costs nothing and is a pleasure.",
+    "Advice, when most needed, is least heeded."
   ];
 
   void randomFortune() {
@@ -90,15 +77,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            ElevatedButton(onPressed: randomFortune, child: Text('Get Fortune'))
+            ElevatedButton(
+                onPressed: randomFortune, child: const Text('Get Fortune'))
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: randomFortune,
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ),
     );
   }
 }
